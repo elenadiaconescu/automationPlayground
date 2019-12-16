@@ -1,0 +1,10 @@
+# source-code editor
+.idea/
+.vscode
+
+# dependencies and automatically generated files
+package-lock.json
+yarn.lock
+
+# node_modules
+.node_modules
