@@ -1,4 +1,4 @@
-class Page{
+class Page {
 
 };
 

@@ -9,13 +9,6 @@ class GooglePage extends Page {
         return $(`#input aria-label=\"Hledat Googlem\"`);
     }
 
-    // get resultMatata() {
-    //     return$(` `);
-    // }
-
-    // get resultHakunaMatata() {
-    //     return$(` `);
-    // }
 }
 
 module.exports = GooglePage;

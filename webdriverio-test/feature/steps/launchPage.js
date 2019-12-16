@@ -11,7 +11,7 @@ Given('google page', () => {
 });
 
 Given('User clicks on search field', () => {
-    searchPage.searchField.waitForDisplayed(magicNr.TEN_SECONDS);
+    searchPage.searchField.waitForDisplayed(magicNr.THRE_SECONDS);
     assert(searchPage.searchField.isDisplayed());
     searchPage.searchField.click();
 });
@@ -35,7 +35,6 @@ When('User passes {string} in search field', (searchTerm) => {
     }
 });
 
-Then('User clicks on search', () => {
-    searchPage.googleSearchButton.waitForDisplayed(magicNr.TEN_SECONDS);
-    // browser.click(searchPage.googleSearchButton);
+Then('User sees search button', () => {
+    searchPage.googleSearchButton.isDisplayed();
 });

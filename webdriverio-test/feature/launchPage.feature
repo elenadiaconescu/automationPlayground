@@ -17,5 +17,5 @@ Feature: Search
 
     @smoke
     Scenario: User passes "hakunamatata" and clicks search
-    When User passes "hakunamatata" in search field
-    Then User clicks on search
+        When User passes "hakunamatata" in search field
+        Then User sees search button
