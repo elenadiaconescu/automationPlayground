@@ -1,5 +1,5 @@
 @feature/search
-Feature: Search
+Feature: Google
 
     Background: User opens Google Page
         Given google page

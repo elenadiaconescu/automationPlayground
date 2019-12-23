@@ -22,6 +22,12 @@ exports.config = {
     services: ['chromedriver'],
     framework: 'cucumber',
     reporters: ['spec'],
+
+    suites:{
+        launchPage: ['./feature/launchPage.feature'],
+        videoPage: ['./feature/videoPage.feature']
+    },
+
     cucumberOpts: {
         require: ['./feature/steps/*.js'],
     },
