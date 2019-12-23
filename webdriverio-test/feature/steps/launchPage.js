@@ -17,8 +17,8 @@ Given('User clicks on search field', () => {
 });
 
 When('title Google is displayed', () => {
-    const title = browser.getTitle()
-    assert.strictEqual(title, 'Google')
+    const title = browser.getTitle();
+    assert.strictEqual(title, 'Google');
 });
 
 When('User passes {string} in search field', (searchTerm) => {
@@ -35,6 +35,27 @@ When('User passes {string} in search field', (searchTerm) => {
     }
 });
 
-Then('User sees search button', () => {
+Given('User write hakunamatata in search field', () => {
+    searchPage.searchField.setValue("hakunamatata");
+});
+
+When('User sees search button', () => {
     searchPage.googleSearchButton.isDisplayed();
+});
+
+Then('User clicks on search button', () => {
+    searchPage.searchField.click();
+    searchPage.wikiTitle.isDisplayed();
+});
+
+Then('Users selects youtube video', () => {
+    searchPage.youtubeVideo.waitForDisplayed(magicNr.THRE_SECONDS);
+    searchPage.youtubeVideo.click();
+});
+
+Then('should pause the execution', () => {
+    const starttime = new Date().getTime()
+    browser.pause(3000)
+    const endtime = new Date().getTime()
+    console.log(endtime - starttime) // outputs: 3000
 });

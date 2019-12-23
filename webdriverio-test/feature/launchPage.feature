@@ -7,7 +7,6 @@ Feature: Search
     @smoke
     Scenario Outline: User passes "<content_type>" to search field
         When title Google is displayed
-        Given User clicks on search field
         When User passes "<searched_keyword>" in search field
         Examples:
             | content_type | searched_keyword |
@@ -17,5 +16,7 @@ Feature: Search
 
     @smoke
     Scenario: User passes "hakunamatata" and clicks search
-        When User passes "hakunamatata" in search field
-        Then User sees search button
+        Given User write hakunamatata in search field
+        When User sees search button
+        Then User clicks on search button
+       
