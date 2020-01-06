@@ -17,14 +17,16 @@
     "@wdio/mocha-framework": "^5.16.10",
     "@wdio/spec-reporter": "^5.16.5",
     "@wdio/sync": "^5.16.10",
-    "chromedriver": "^78.0.1",
+    "chromedriver": "^79.0.3",
     "eslint": "^6.7.2",
     "eslint-config-airbnb-base": "^14.0.0",
     "eslint-plugin-chai-friendly": "^0.5.0",
     "eslint-plugin-cucumber": "^1.4.0",
     "eslint-plugin-import": "^2.18.2",
     "eslint-plugin-wdio": "^5.13.2",
-    "wdio-chromedriver-service": "^5.0.2"
+    "wdio-chromedriver-service": "^5.0.2",
+    "@wdio/allure-reporter": "^5.11.0",
+    "@wdio/dot-reporter": "^5.11.0"
   },
   "dependencies": {
     "chai": "^4.2.0",

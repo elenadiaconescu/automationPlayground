@@ -3,9 +3,9 @@ exports.config = {
     // protocol: 'https',
     path: '/',
     specs: [
-        './feature/*.feature'
+        './feature/**/*.feature',
     ],
-    maxInstances:10,
+    maxInstances: 10,
     exclude: [
         // 'path/to/excluded/files'
     ],
@@ -23,12 +23,24 @@ exports.config = {
     framework: 'cucumber',
     reporters: ['spec'],
 
-    suites:{
-        launchPage: ['./feature/launchPage.feature'],
-        videoPage: ['./feature/videoPage.feature']
-    },
+    // suites: {
+    //     launchPage: ['./feature/**/launch-page.feature'],
+    //     videoPage: ['./feature/**/video-page.feature'],
+    // },
 
     cucumberOpts: {
-        require: ['./feature/steps/*.js'],
+        require: ['./feature/steps-definition/*.js'],
+        backtrace: false,
+        requireModule: [],
+        dryRun:false,
+        failFast:false,
+        format:['pretty'],
+        colors:true,
+        snippets:true,
+        source:true,
+        profile:[],
+        strict:false,
+        timeout:180000,
+        tags:[],
     },
 };

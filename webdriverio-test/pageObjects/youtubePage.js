@@ -1,20 +1,16 @@
 const Page = require('./page');
 
 class YoutubePage extends Page {
-    get searchField() {
-        return $(`   `);
+    get youtubeSearchField() {
+        return $(`#search`);
     }
 
-    get googleSearchButton() {
-        return $(`  `);
+    get youtubeSearchButton() {
+        return $(`#search-icon-legacy`);
     }
 
-    get wikiTitle() {
-        return $(`  `);
-    }
-
-    get youtubeVideo() {
-        return $(`  `);
+    get youtubeVideoFound() {
+        return $(`#video-title`);
     }
 }
 

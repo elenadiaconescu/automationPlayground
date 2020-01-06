@@ -7,7 +7,7 @@ const googlePage = require('../../pageObjects/googlePage');
 const searchGooglePage = new googlePage();
 
 Given('google page', () => {
-    browser.url('https://google.com')
+    browser.url('https://google.com');
 });
 
 Given('User clicks on search field', () => {
@@ -36,16 +36,19 @@ When('User passes {string} in search field', (searchTerm) => {
 });
 
 Given('User write hakunamatata in search field', () => {
+    searchGooglePage.searchField.waitForDisplayed(magicNr.THRE_SECONDS);
+    searchGooglePage.searchField.isDisplayed();
     searchGooglePage.searchField.setValue("hakunamatata");
 });
 
 When('User sees search button', () => {
+    searchGooglePage.googleSearchButton.waitForDisplayed(magicNr.THRE_SECONDS);
     searchGooglePage.googleSearchButton.isDisplayed();
 });
 
 Then('User clicks on search button', () => {
-    searchGooglePage.searchField.click();
-    searchGooglePage.wikiTitle.isDisplayed();
+    searchGooglePage.googleSearchButton.click();
+    // searchGooglePage.wikiTitle.isDisplayed();
 });
 
 Then('Users selects youtube video', () => {
