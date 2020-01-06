@@ -5,6 +5,8 @@
 # dependencies and automatically generated files
 package-lock.json
 yarn.lock
+debug.log
 
 # node_modules
 node_modules/
+debug.log
