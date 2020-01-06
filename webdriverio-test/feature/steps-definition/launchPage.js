@@ -47,13 +47,7 @@ When('User sees search button', () => {
 });
 
 Then('User clicks on search button', () => {
-    searchGooglePage.googleSearchButton.click();
-    // searchGooglePage.wikiTitle.isDisplayed();
-});
-
-Then('Users selects youtube video', () => {
-    searchGooglePage.youtubeVideo.waitForDisplayed(magicNr.THRE_SECONDS);
-    searchGooglePage.youtubeVideo.click();
+    searchGooglePage.googleSearchButtonFromDropdown.click();
 });
 
 Then('should pause the execution', () => {
