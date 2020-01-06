@@ -5,16 +5,20 @@ exports.config = {
     specs: [
         './feature/**/*.feature',
     ],
-    maxInstances: 10,
     exclude: [
         // 'path/to/excluded/files'
     ],
+    maxInstances: 1,
     capabilities: [{
+        maxInstances: 1,
         browserName: 'chrome',
+        'goog:chromeOptions': {
+
+        },
     }],
     logLevel: 'debug',
     bail: 0,
-    baseUrl: 'http://localhost',
+    // baseUrl: 'http://localhost',
     waitforTimeout: 10000,
     connectionRetryTimeout: 90000,
     connectionRetryCount: 3,
@@ -23,24 +27,25 @@ exports.config = {
     framework: 'cucumber',
     reporters: ['spec'],
 
-    // suites: {
-    //     launchPage: ['./feature/**/launch-page.feature'],
-    //     videoPage: ['./feature/**/video-page.feature'],
-    // },
+    suites: {
+        launchPage: ['./feature/launchPage/launch-page.feature'],
+        videoPage: ['./feature/videoPage/video-page.feature'],
+    },
 
     cucumberOpts: {
         require: ['./feature/steps-definition/*.js'],
         backtrace: false,
         requireModule: [],
-        dryRun:false,
-        failFast:false,
-        format:['pretty'],
-        colors:true,
-        snippets:true,
-        source:true,
-        profile:[],
-        strict:false,
-        timeout:180000,
-        tags:[],
+        dryRun: false,
+        failFast: false,
+        format: ['pretty'],
+        colors: true,
+        snippets: true,
+        source: true,
+        profile: [],
+        strict: false,
+        timeout: 180000,
+        tags: [],
+        ignoreUndefinedDefinition: false,
     },
 };
